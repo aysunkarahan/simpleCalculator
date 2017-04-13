@@ -25,12 +25,20 @@
 	 	height: 66px;
 	 	width: 360px;
 	 }
-	 .tus,.x0,.x1,.x2,.x3,.x4,.x5,.x6,.x7,.x8,.x9,.topla,.cikar,.carp,.bol{
+	 .tus,.x0,.x1,.x2,.x3,.x4,.x5,.x6,.x7,.x8,.x9,.virgul{
 	 	background-color: white;
 	 	border-style: solid;
 	 	border-color: rgb(93, 93, 173);
 	 	font-size: 30px;
 	 	width: 115px;
+	 	height: 50px;
+	 }
+	 .topla,.cikar,.carp,.bol{
+	 	background-color: white;
+	 	border-style: solid;
+	 	border-color: rgb(93, 93, 173);
+	 	font-size: 30px;
+	 	width: 82px;
 	 	height: 50px;
 	 }
 	 .spann{
@@ -166,13 +174,15 @@
 <input class="x9" type="button" onclick="$.dok.fncJquery(this)" value="9"/>
 </div>
 <div class="row"><input class="x0" type="button" onclick="$.sif.fncJquery(this)" value="0"/>
-<input class="topla" type="button" onclick="$.topla.fncJquery(this)" value="+"/>
+<input class="virgul" type="button" onclick="$.virgul.fncJquery(this)" value="!"/>
 <input  style="background-color: #6dc570;"  class="tus" type="submit" name="gonder" value="="/>
 </div>
 <div class="row">
 <input class="cikar" type="button" onclick="$.cikar.fncJquery(this)" value="-"/>
 <input class="carp" type="button" onclick="$.carp.fncJquery(this)" value="*"/>
 <input class="bol" type="button" onclick="$.bol.fncJquery(this)" value="/"/>
+<input class="topla" type="button" onclick="$.topla.fncJquery(this)" value="+"/>
+
 </div>
 </div>
 </form>
@@ -190,7 +200,7 @@ class Makine{
 
    function elemanlar($sayi){
 
-   	$pattern ='/[+\-\*\/\(\)\.]/';
+   	$pattern ='/[+\!\-\*\/\(\)\.]/';
    	preg_match_all($pattern, $sayi, $results);
    	$sonuc = explode($results[0][0], $sayi);
 
@@ -214,6 +224,13 @@ class Makine{
         		$islem = $sonuc[0]/$sonuc[1];
         		echo "$sonuc[0]/$sonuc[1]=".$islem;
         		break; 
+        	case '!':
+        	$islem = 1;
+        	for ($i=1; $i <=$sonuc[0] ; $i++) { 
+        		 $islem = $islem*$i;
+        	}        		
+        		echo "$sonuc[0]!=".$islem;
+        		break;
         	default:
         		echo "";
         		break;
