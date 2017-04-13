@@ -25,7 +25,7 @@
 	 	height: 66px;
 	 	width: 360px;
 	 }
-	 .tus,.x0,.x1,.x2,.x3,.x4,.x5,.x6,.x7,.x8,.x9,.virgul{
+	 .tus,.x0,.x1,.x2,.x3,.x4,.x5,.x6,.x7,.x8,.x9,.fact{
 	 	background-color: white;
 	 	border-style: solid;
 	 	border-color: rgb(93, 93, 173);
@@ -136,9 +136,9 @@
 				
 			}
 		}
-		$.virgul =  {
+		$.fact =  {
 			fncJquery : function (e){
-				$(".input").attr("value", $(".input").attr("value") + $(".virgul").attr("value"));
+				$(".input").attr("value", $(".input").attr("value") + $(".fact").attr("value"));
 				
 			}
 		}
@@ -174,7 +174,7 @@
 <input class="x9" type="button" onclick="$.dok.fncJquery(this)" value="9"/>
 </div>
 <div class="row"><input class="x0" type="button" onclick="$.sif.fncJquery(this)" value="0"/>
-<input class="virgul" type="button" onclick="$.virgul.fncJquery(this)" value="!"/>
+<input class="fact" type="button" onclick="$.fact.fncJquery(this)" value="!"/>
 <input  style="background-color: #6dc570;"  class="tus" type="submit" name="gonder" value="="/>
 </div>
 <div class="row">
