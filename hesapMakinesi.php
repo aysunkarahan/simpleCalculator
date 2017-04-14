@@ -53,6 +53,7 @@
 
 		
 		$.sif =  {
+
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".x0").attr("value"));
 				
@@ -115,30 +116,80 @@
 		$.topla =  {
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".topla").attr("value"));
+				//To disable 
+  				$('.topla').attr('disabled', 'disabled');
+				//To disable 
+  				$('.cikar').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.carp').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.bol').attr('disabled', 'disabled');
+  				//To disable 
+  				$('.fact').attr('disabled', 'disabled');
 				
 			}
 		}
 		$.cikar =  {
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".cikar").attr("value"));
+				//To disable 
+  				$('.cikar').attr('disabled', 'disabled');
+				//To disable 
+  				$('.topla').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.carp').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.bol').attr('disabled', 'disabled');
+  				//To disable 
+  				$('.fact').attr('disabled', 'disabled');
 				
 			}
 		}
 		$.carp =  {
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".carp").attr("value"));
+				//To disable 
+  				$('.carp').attr('disabled', 'disabled');
+				//To disable 
+  				$('.topla').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.cikar').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.bol').attr('disabled', 'disabled');
+  				//To disable 
+  				$('.fact').attr('disabled', 'disabled');
 				
 			}
 		}
 		$.bol =  {
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".bol").attr("value"));
+				//To disable 
+  				$('.bol').attr('disabled', 'disabled');
+				//To disable 
+  				$('.topla').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.carp').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.cikar').attr('disabled', 'disabled');
+  				//To disable 
+  				$('.fact').attr('disabled', 'disabled');
 				
 			}
 		}
 		$.fact =  {
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".fact").attr("value"));
+				//To disable 
+  				$('.fact').attr('disabled', 'disabled');
+				//To disable 
+  				$('.topla').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.carp').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.bol').attr('disabled', 'disabled');
+  				//To disable 
+  				$('.cikar').attr('disabled', 'disabled');
 				
 			}
 		}
@@ -159,7 +210,7 @@
 <input class="input" type="text" name="display" value=""/></div>
 
 <div class="row">
-<input class="x1" type="button" onclick="$.bir.fncJquery(this)" value="1"/>
+<input id="id" class="x1" type="button" onclick="$.bir.fncJquery(this)" value="1"/>
 <input class="x2" type="button" onclick="$.iki.fncJquery(this)" value="2"/>
 <input class="x3" type="button" onclick="$.uc.fncJquery(this)" value="3"/>
 </div>
@@ -180,7 +231,7 @@
 <div class="row">
 <input class="cikar" type="button" onclick="$.cikar.fncJquery(this)" value="-"/>
 <input class="carp" type="button" onclick="$.carp.fncJquery(this)" value="*"/>
-<input class="bol" type="button" onclick="$.bol.fncJquery(this)" value="/"/>
+<input class="bol"  type="button" onclick="$.bol.fncJquery(this)" value="/"/>
 <input class="topla" type="button" onclick="$.topla.fncJquery(this)" value="+"/>
 
 </div>
