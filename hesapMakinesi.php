@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>My Simple Calculator</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
 <style type="text/css">
@@ -242,12 +242,7 @@
 
 <?php 
 
-class Makine{   
-  
-  	public $sayi1;
-  	public $sayi2;
-  	public $operator;
-
+class Makine{ 
 
    function elemanlar($sayi){
 
