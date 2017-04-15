@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Basit Hesap Makinesi</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
 <style type="text/css">
@@ -182,16 +182,6 @@
 		$.fact =  {
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".fact").attr("value"));
-				//To disable 
-  				$('.fact').attr('disabled', 'disabled');
-				//To disable 
-  				$('.topla').attr('disabled', 'disabled');
- 				 //To disable 
-  				$('.carp').attr('disabled', 'disabled');
- 				 //To disable 
-  				$('.bol').attr('disabled', 'disabled');
-  				//To disable 
-  				$('.cikar').attr('disabled', 'disabled');
 				
 			}
 		}
@@ -273,7 +263,8 @@ class Makine{
         		echo "$sonuc[0] / $sonuc[1] =".$islem;
         		break; 
         	case '!':
-        	$sonuc = Makine::factorial($sonuc[0]);
+        	$islem = Makine::factorial($sonuc[0]);
+        	echo "$sonuc[0]!  =".$islem;
         		break;
         	default:
         		echo "";
@@ -287,8 +278,7 @@ class Makine{
         	for ($j=1; $j <=$operand ; $j++) { 
         		 $islem = $islem*$j;
         	}        		
-        		echo "$operand! = ".$islem;
-
+        		return $islem;
    }
 
 }
