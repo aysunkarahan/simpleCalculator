@@ -182,6 +182,17 @@
 		$.fact =  {
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".fact").attr("value"));
+				//To disable 
+  				$('.bol').attr('disabled', 'disabled');
+				//To disable 
+  				$('.topla').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.carp').attr('disabled', 'disabled');
+ 				 //To disable 
+  				$('.cikar').attr('disabled', 'disabled');
+  				//To disable 
+  				$('.fact').attr('disabled', 'disabled');
+				
 				
 			}
 		}
