@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Simple Calculator</title>
+	<title></title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
 <style type="text/css">
@@ -57,6 +57,8 @@
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".x0").attr("value"));
 				
+			
+				
 			}
 		}
 		$.bir =  {
@@ -98,19 +100,19 @@
 		$.yedi =  {
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".x7").attr("value"));
-				
+								
 			}
 		}
 		$.sek =  {
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".x8").attr("value"));
-				
+						
 			}
 		}
 		$.dok =  {
 			fncJquery : function (e){
 				$(".input").attr("value", $(".input").attr("value") + $(".x9").attr("value"));
-				
+								
 			}
 		}
 		$.topla =  {
@@ -243,39 +245,35 @@
 <?php 
 
 class Makine{ 
-
+  
+  
    function elemanlar($sayi){
 
    	$pattern ='/[+\!\-\*\/\(\)\.]/';
    	preg_match_all($pattern, $sayi, $results);
    	$sonuc = explode($results[0][0], $sayi);
 
-        
             switch ($results[0][0]) {
         	case '+':
         		$islem = $sonuc[0]+$sonuc[1];
-        		echo "$sonuc[0]+$sonuc[1]=".$islem;
+        		echo "$sonuc[0] + $sonuc[1] = ".$islem;
         		break;        	
         	case '-':
         		$islem = $sonuc[0]-$sonuc[1];
-        		echo "$sonuc[0]-$sonuc[1]=".$islem;
+        		echo "$sonuc[0] - $sonuc[1] = ".$islem;
         		break;       	
         	
         	case '*':
         		$islem = $sonuc[0]*$sonuc[1];
-        		echo "$sonuc[0]x$sonuc[1]=".$islem;
+        		echo "$sonuc[0] x $sonuc[1] =".$islem;
         		break;       	
         	
         	case '/':
         		$islem = $sonuc[0]/$sonuc[1];
-        		echo "$sonuc[0]/$sonuc[1]=".$islem;
+        		echo "$sonuc[0] / $sonuc[1] =".$islem;
         		break; 
         	case '!':
-        	$islem = 1;
-        	for ($i=1; $i <=$sonuc[0] ; $i++) { 
-        		 $islem = $islem*$i;
-        	}        		
-        		echo "$sonuc[0]!=".$islem;
+        	$sonuc = Makine::factorial($sonuc[0]);
         		break;
         	default:
         		echo "";
@@ -284,6 +282,16 @@ class Makine{
 
    }
 
+   function factorial($operand){
+   			$islem = 1;
+        	for ($j=1; $j <=$operand ; $j++) { 
+        		 $islem = $islem*$j;
+        	}        		
+        		echo "$operand! = ".$islem;
+
+   }
 
 }
+
+
 ?>
