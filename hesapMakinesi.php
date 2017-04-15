@@ -42,8 +42,10 @@
 	 	height: 50px;
 	 }
 	 .spann{
+		position: relative;
+	 	width: 100%;
 	 	text-align: right;
-	 	font-size: 50px;
+	 	font-size: 100%;
 	 	text-transform: none;
 	 }
 </style>
